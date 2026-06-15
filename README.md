@@ -47,11 +47,19 @@ brew install --HEAD akunzai/tap/gistui
 
 ## Updating the formula
 
-When a new `gistui` version is released, bump `url` and `sha256` in
-[`Formula/gistui.rb`](Formula/gistui.rb):
+The [Bump formula](.github/workflows/bump.yml) workflow runs daily (and on demand via
+**Run workflow**), uses `brew livecheck` to detect a new `gistui` release, and opens a PR
+bumping `url` + `sha256` automatically — no manual step on release.
+
+It needs a repository secret **`HOMEBREW_BUMP_TOKEN`** (a Personal Access Token — the action
+rejects the default `GITHUB_TOKEN`). Use a classic PAT with `public_repo` + `workflow`, or a
+fine-grained token scoped to this tap with Contents and Pull requests read/write.
+
+To bump by hand instead:
 
 ```bash
 curl -sL https://github.com/akunzai/gistui/archive/refs/tags/vX.Y.Z.tar.gz | shasum -a 256
 ```
 
-Then update the `url` tag and paste the new checksum.
+Then update the `url` tag and paste the new checksum into
+[`Formula/gistui.rb`](Formula/gistui.rb).

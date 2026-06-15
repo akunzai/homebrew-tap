@@ -1,0 +1,29 @@
+name: Bump formula
+
+# Detects new gistui releases via `brew livecheck` and opens a PR bumping the
+# formula's url + sha256. Mirrors the Scoop bucket's Excavator: third-party taps
+# self-host this, since Homebrew's BrewTestBot only services homebrew-core.
+#
+# Requires a repository secret HOMEBREW_BUMP_TOKEN — a Personal Access Token,
+# NOT the default GITHUB_TOKEN (the action rejects it). Classic PAT with
+# `public_repo` + `workflow`, or a fine-grained token scoped to this tap with
+# Contents: read/write and Pull requests: read/write.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  bump:
+    name: Bump gistui
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bump gistui formula
+        uses: dawidd6/action-homebrew-bump-formula@v7
+        with:
+          token: ${{ secrets.HOMEBREW_BUMP_TOKEN }}
+          no_fork: true
+          tap: akunzai/homebrew-tap
+          formula: gistui
+          livecheck: true

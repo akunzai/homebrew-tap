@@ -6,6 +6,11 @@ class Gistui < Formula
   license "MIT"
   head "https://github.com/akunzai/gistui.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   depends_on "rust" => :build
   depends_on "gh" # gistui shells out to the GitHub CLI at runtime
 
