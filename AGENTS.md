@@ -29,6 +29,8 @@ automatically — no manual step on release:
 - `brew livecheck` resolves the latest GitHub release via the formula's `livecheck` block
   (`strategy :github_latest`); [`dawidd6/action-homebrew-bump-formula`](https://github.com/dawidd6/action-homebrew-bump-formula)
   then opens a PR bumping `url` + `sha256`.
+- The job sets `HOMEBREW_NO_REQUIRE_TAP_TRUST`: Homebrew 6.0.0 refuses to load formulae from
+  the freshly-tapped, untrusted tap the action creates, which otherwise fails `brew livecheck`.
 
 **Required secret — `HOMEBREW_BUMP_TOKEN`.** The action rejects the default `GITHUB_TOKEN`,
 so a Personal Access Token must be set as a repository secret (Settings → Secrets and
