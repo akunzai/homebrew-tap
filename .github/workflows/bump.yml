@@ -18,6 +18,13 @@ jobs:
   bump:
     name: Bump gistui
     runs-on: ubuntu-latest
+    env:
+      # The action taps this repo fresh, which Homebrew 6.0.0 treats as untrusted
+      # and refuses to load (see README "Tap trust"). Since this is our own tap
+      # driving its own automation, disable the trust requirement for the run.
+      # (Deprecated upstream; if removed, add a pre-step `brew tap akunzai/homebrew-tap`
+      # + `brew trust --formula akunzai/homebrew-tap/gistui` before the action.)
+      HOMEBREW_NO_REQUIRE_TAP_TRUST: "1"
     steps:
       - name: Bump gistui formula
         uses: dawidd6/action-homebrew-bump-formula@v7
