@@ -1,8 +1,8 @@
 class Gistui < Formula
   desc "Terminal UI for managing GitHub Gists"
   homepage "https://akunzai.github.io/gistui/"
-  url "https://github.com/akunzai/gistui/archive/refs/tags/v0.14.0.tar.gz"
-  sha256 "fe1c096bab3854992a8f889bd97f38f1d1fdbff092c2ceb9d56c53adadd9910d"
+  url "https://github.com/akunzai/gistui/archive/refs/tags/v0.14.1.tar.gz"
+  sha256 "8c0d3401bc7b88cf2fb1fefb2116a13381e94615cf4b790efdc0b4d3854ace84"
   license "MIT"
   head "https://github.com/akunzai/gistui.git", branch: "main"
 
