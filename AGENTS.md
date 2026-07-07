@@ -8,16 +8,17 @@ Guidance for AI assistants and maintainers working in this Homebrew tap.
 ## What this repo is
 
 A [Homebrew](https://brew.sh) tap that ships the `gistui` formula. The single formula,
-[`Formula/gistui.rb`](Formula/gistui.rb), builds gistui from each GitHub release's source
-tarball and depends on `gh` at runtime. User-facing install and tap-trust docs live in
-[`README.md`](README.md).
+[`Formula/gistui.rb`](Formula/gistui.rb), installs a prebuilt binary from each GitHub release
+(per OS/arch), with `brew install --HEAD` building from source; depends on `gh` at runtime.
+User-facing install and tap-trust docs live in [`README.md`](README.md).
 
 ## Validating a formula change
 
 ```bash
 brew style Formula/gistui.rb
 brew audit --strict --online akunzai/tap/gistui
-brew install --build-from-source akunzai/tap/gistui   # full build + test
+brew install akunzai/tap/gistui        # prebuilt-binary path
+brew install --HEAD akunzai/tap/gistui # source-build path
 ```
 
 ## Updating the formula
