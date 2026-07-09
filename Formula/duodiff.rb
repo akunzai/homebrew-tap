@@ -5,23 +5,23 @@ class Duodiff < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/akunzai/duodiff/releases/download/v0.5.0/duodiff-v0.5.0-x86_64-apple-darwin.tar.gz"
-      sha256 "05e182b9d72d6aa4fdf10d342d004b9411859cb0842f032ced1e9617e033b1ae"
+      url "https://github.com/akunzai/duodiff/releases/download/v0.5.1/duodiff-v0.5.1-x86_64-apple-darwin.tar.gz"
+      sha256 "13036b5c427dcf4acaad201a2ee4896cbfef3d01f9ee24a69813796bc5ea25ed"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/akunzai/duodiff/releases/download/v0.5.0/duodiff-v0.5.0-aarch64-apple-darwin.tar.gz"
-      sha256 "d48b6e7495b3ef33ffce7c47489add99f0bb4a99dc27cf9df7763385703456b2"
+      url "https://github.com/akunzai/duodiff/releases/download/v0.5.1/duodiff-v0.5.1-aarch64-apple-darwin.tar.gz"
+      sha256 "5ddbcce6b859c1b58b391290949936f4d43e530780f0908afc870ae1f58edd6a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/akunzai/duodiff/releases/download/v0.5.0/duodiff-v0.5.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c7ec5439fcdc19cc938800b4ee8f4cdacd3654e1fa37c6eb08107c27c38ef283"
+      url "https://github.com/akunzai/duodiff/releases/download/v0.5.1/duodiff-v0.5.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c8ddf0a7918ef10cc459ce1421288d5a6f96f53301d25688510bc94730f1108d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/akunzai/duodiff/releases/download/v0.5.0/duodiff-v0.5.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "dc066711acd39c0485c7e6f709fc335fff1a8b3bbc579c865907bc023cad42a9"
+      url "https://github.com/akunzai/duodiff/releases/download/v0.5.1/duodiff-v0.5.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2fac50d4951912117ad5c69c52f7b9200c23adaa2cd53e32b519381b739de773"
     end
   end
 
