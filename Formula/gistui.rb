@@ -17,23 +17,23 @@ class Gistui < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/akunzai/gistui/releases/download/v0.24.0/gistui-v0.24.0-x86_64-apple-darwin.tar.gz"
-      sha256 "39789c2b6b8f7dfc8998d8b5096cf3c7fa95011740943d5017ccf83af934eed9"
+      url "https://github.com/akunzai/gistui/releases/download/v0.24.1/gistui-v0.24.1-x86_64-apple-darwin.tar.gz"
+      sha256 "616b70f8e6ee5879ed4a26cb54c0a01377346f7f004ebdf9c2b2ee82b2a65c2a"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/akunzai/gistui/releases/download/v0.24.0/gistui-v0.24.0-aarch64-apple-darwin.tar.gz"
-      sha256 "cf565ce3bab5ed3c3481a663f0bcc14b63cc5c9d3f3652ce80f19253702b10a2"
+      url "https://github.com/akunzai/gistui/releases/download/v0.24.1/gistui-v0.24.1-aarch64-apple-darwin.tar.gz"
+      sha256 "d5018ef152146f5231b70499bb241790dfbac289f5eaad48f48dccb1fa05bbfa"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/akunzai/gistui/releases/download/v0.24.0/gistui-v0.24.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "648fe858c813a27350a8b8a9f548147d9cc25b5150ba6642e571c6bc188f5604"
+      url "https://github.com/akunzai/gistui/releases/download/v0.24.1/gistui-v0.24.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ac88b0d2766587d4e332103ee5e86808fcebef5e1862719c1f8fbaaaa542e203"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/akunzai/gistui/releases/download/v0.24.0/gistui-v0.24.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "488e60154bab21f9dbcf12b3b22f70542c694338252f5941ccba1ac3a7c6ea8c"
+      url "https://github.com/akunzai/gistui/releases/download/v0.24.1/gistui-v0.24.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0ec523981597f983b92a076fdb5c669c7056253c61e08bc3dfcdb6a1240971b2"
     end
   end
 
