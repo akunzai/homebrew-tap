@@ -5,23 +5,23 @@ class SkillsManager < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/akunzai/skills-manager/releases/download/v0.24.0/skills_darwin_amd64.tar.gz"
-      sha256 "5c505243d805341834dba8f1b43de09ca530b2fc4df16e4a15dcad80fe7aec73"
+      url "https://github.com/akunzai/skills-manager/releases/download/v0.25.0/skills_darwin_amd64.tar.gz"
+      sha256 "0168891cbb4bf5e312700f945dea1ad569480f4800b54de0d23c38f0a68496a4"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/akunzai/skills-manager/releases/download/v0.24.0/skills_darwin_arm64.tar.gz"
-      sha256 "6f20a4268f76440ea738eb9c89ee955baa6a7ff46bee7e9b4a99e882fca84656"
+      url "https://github.com/akunzai/skills-manager/releases/download/v0.25.0/skills_darwin_arm64.tar.gz"
+      sha256 "58765f8238acca322bc1b047ea1699f831243b821512aa38a945a395e2cb2df1"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/akunzai/skills-manager/releases/download/v0.24.0/skills_linux_amd64.tar.gz"
-      sha256 "fb794394fe380577a5f2e0eedf3ee95b4d1e59bddac969d6cc588bbf449caeda"
+      url "https://github.com/akunzai/skills-manager/releases/download/v0.25.0/skills_linux_amd64.tar.gz"
+      sha256 "fedea6dc59c2dfe339b9b1f94d35ca9f7e1498561d365bd5e84f3087202fc9c8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/akunzai/skills-manager/releases/download/v0.24.0/skills_linux_arm64.tar.gz"
-      sha256 "2b23bc5355587ebb242159681812ce8af1b71aa9fbdd5ea3240548aca28e2f89"
+      url "https://github.com/akunzai/skills-manager/releases/download/v0.25.0/skills_linux_arm64.tar.gz"
+      sha256 "3749292e7aa6711d6c9f6e11be460450c7ab2dc1d2de80e206a6e4bd97eef2df"
     end
   end
 
