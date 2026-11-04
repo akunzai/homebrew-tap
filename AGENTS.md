@@ -17,6 +17,13 @@ prebuilt binary from that app's GitHub releases (per OS/arch):
   `head` build; declares `conflicts_with "skills"` because homebrew-core ships a
   different, Node-based formula of that name which also installs a `skills` executable.
 
+- [`Formula/glov-qemu.rb`](Formula/glov-qemu.rb) — not a prebuilt binary: builds QEMU from
+  the official tarball with a patch kept inline after `__END__` (virtio-balloon on macOS), keg-only
+  because it installs the same executables as homebrew-core's `qemu`. Bump it by hand: new `url`
+  and `sha256` from homebrew-core's `qemu`, check that the patch still applies, then
+  `brew install --build-from-source` and `brew test`. QEMU declines AI-assisted patches, so the
+  patch stays here instead of going upstream.
+
 User-facing install and tap-trust docs live in [`README.md`](README.md).
 
 ## Validating a formula change
